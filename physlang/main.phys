@@ -1,0 +1,14 @@
+#type Coulomb C A*s // defines type for Coulomb with short name C as the type with short name A (Ampere) * short name s (second)
+
+c1 = 1C     // makes a new variable called c1 with type Coulomb and sets it to 1C
+c2: C = 1   // exactly the same as the line above, just with type specified in declaration rather than initialization
+
+c1! // prints value of c1 - shouts! it
+c1? // prints type of c1 - questions what is it?
+
+a1: A = 2
+a2 = 4A
+
+a = a1*a2 // creates new variable called a with type A^2 and value 8. type inferred from parent types
+
+c: C = a1*a2 // tries to create new variable with type Coulomb (specified) but will error because type C is not A^2 but A*s
